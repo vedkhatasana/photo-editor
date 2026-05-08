@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoEdit</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <div class="left">
+                <div class="top">
+                    <label for="image-input" class="btn btn-primary">
+                        <i class="ri-image-add-line"></i>
+                        Choose image
+                        <input type="file" id="image-input" accept="image/*" hidden>
+                    </label>
+                    <button class="btn btn-danger" id="reset-btn"><i class="ri-refresh-line"></i> Reset</button>
+                    <button class="btn btn-success" id="download-btn"><i class="ri-download-2-line"></i> Download</button>
+                    <button class="btn btn-secondary" id="flip-h-btn"><i class="ri-flip-horizontal-line"></i></button>
+                    <button class="btn btn-secondary" id="flip-v-btn"><i class="ri-flip-vertical-line"></i></button>
+                    <button class="btn btn-secondary" id="rotate-btn"><i class="ri-rotate-lock-line"></i></button>
+                    <button class="btn btn-secondary" id="zoom-in-btn"><i class="ri-zoom-in-line"></i></button>
+                    <button class="btn btn-secondary" id="zoom-out-btn"><i class="ri-zoom-out-line"></i></button>
+                </div>
+                <div class="bottom">
+                    <div class="placeholder">
+                        <i class="ri-image-line"></i>
+                        <p>No image chosen</p>
+                        <span>Drag & drop or click Choose image</span>
+                    </div>
+                    <canvas id="image-canvas"></canvas>
+                </div>
+            </div>
+            <div class="right">
+                <div class="panel-tabs">
+                    <button class="tab-btn active" data-tab="filters"><i class="ri-contrast-2-line"></i> Filters</button>
+                    <button class="tab-btn" data-tab="presets"><i class="ri-magic-line"></i> Presets</button>
+                </div>
+
+                <div class="tab-content active" id="tab-filters">
+                    <div class="filters"></div>
+                </div>
+
+                <div class="tab-content" id="tab-presets">
+                    <div class="presets"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
